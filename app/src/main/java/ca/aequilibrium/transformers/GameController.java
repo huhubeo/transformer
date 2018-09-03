@@ -88,23 +88,27 @@ public class GameController {
         for (int i = 0; i < minSize; i++) {
             Transformer memberA = mTeamA.get(i);
             Transformer memberD = mTeamD.get(i);
-            txtResult = "";
 
             int result = fight(memberA, memberD);
+            txtResult += memberA.getName() + " vs " + memberD.getName();
             if (result != 2) {
                 mNumBattles++;
                 if (result < 0) {
                     memberA.setEliminated(true);
+                    txtResult += ": " + memberD.getName() + " won\n";
                 } else if (result > 0) {
                     memberD.setEliminated(true);
+                    txtResult += ": " + memberA.getName() + " won\n";
                 } else {
                     memberA.setEliminated(true);
                     memberD.setEliminated(true);
+                    txtResult += ": Tie\n";
                 }
             } else {
                 mNumBattles++;
                 memberA.setEliminated(true);
                 memberD.setEliminated(true);
+                txtResult += ": Game end\n";
                 //print out the number of battles before ending by Special rule
                 txtResult += mContext.getString(R.string.number_battle) + ":" + mNumBattles;
                 Log.d(TAG, mContext.getString(R.string.number_battle) + ":" + mNumBattles);
