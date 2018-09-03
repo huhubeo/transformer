@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="#bbbbbb" >
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/autobot" />
+
+    <View
+        android:id="@+id/mid_view"
+        android:layout_centerHorizontal="true"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/name_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/mid_view"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="20dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/name"
+            android:textColor="@color/white" />
+        <EditText
+            android:id="@+id/txt_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mid_view"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="20dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/team" />
+        <Spinner
+            android:id="@+id/sp_team"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#ffffffff"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/strength_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/team_container"
+        android:layout_toLeftOf="@id/mid_view"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/strength" />
+        <Spinner
+            android:id="@+id/sp_strength"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intelligence_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mid_view"
+        android:layout_below="@id/team_container"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/intelligence" />
+        <Spinner
+            android:id="@+id/sp_intelligence"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/speed_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/strength_container"
+        android:layout_toLeftOf="@id/mid_view"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/speed" />
+        <Spinner
+            android:id="@+id/sp_speed"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/endurance_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mid_view"
+        android:layout_below="@id/strength_container"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/endurance" />
+        <Spinner
+            android:id="@+id/sp_endurance"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rank_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speed_container"
+        android:layout_toLeftOf="@id/mid_view"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/rank" />
+        <Spinner
+            android:id="@+id/sp_rank"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#ffffffff"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/courage_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mid_view"
+        android:layout_below="@id/speed_container"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/courage" />
+        <Spinner
+            android:id="@+id/sp_courage"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/firepower_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rank_container"
+        android:layout_toLeftOf="@id/mid_view"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/firepower" />
+        <Spinner
+            android:id="@+id/sp_firepower"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/skill_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/mid_view"
+        android:layout_below="@id/rank_container"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="@string/skill" />
+        <Spinner
+            android:id="@+id/sp_skill"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/skill_container"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@color/red"
+        android:text="@string/cancel" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/skill_container"
+        android:layout_toLeftOf="@id/btn_cancel"
+        android:layout_margin="10dp"
+        android:background="@color/blue"
+        android:text="@string/ok" />
+</RelativeLayout>
